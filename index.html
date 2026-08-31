@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
@@ -52,10 +53,6 @@ body {
         "Tajawal",
         sans-serif;
 }
-
-/* =========================================================
-   LAYOUT
-========================================================= */
 
 .app {
     min-height: 100vh;
@@ -667,6 +664,16 @@ body {
     display: block;
 }
 
+.quality-note {
+    color: var(--muted);
+
+    font-size: 10px;
+
+    margin-top: 7px;
+
+    line-height: 1.6;
+}
+
 .export-button {
     width: 100%;
 
@@ -1038,593 +1045,524 @@ body {
     }
 }
 </style>
+
 </head>
 
 <body>
 
 <div class="app">
 
-    <!-- =====================================================
-         SIDEBAR
-    ====================================================== -->
+```
+<aside class="sidebar">
 
-    <aside class="sidebar">
+    <div class="logo">
 
-        <div class="logo">
+        <div class="logo-icon">
+            ▶
+        </div>
 
-            <div class="logo-icon">
-                ▶
+        <div class="logo-text">
+            HTML<span>ToVideo</span>
+        </div>
+
+    </div>
+
+    <nav class="menu">
+
+        <button
+            class="menu-item active"
+            type="button"
+        >
+            <span class="menu-icon">🎬</span>
+            تحويل إلى فيديو
+        </button>
+
+        <button
+            class="menu-item"
+            type="button"
+        >
+            <span class="menu-icon">📁</span>
+            مشاريعي
+        </button>
+
+        <button
+            class="menu-item"
+            type="button"
+        >
+            <span class="menu-icon">🎞️</span>
+            الفيديوهات
+        </button>
+
+        <button
+            class="menu-item"
+            type="button"
+        >
+            <span class="menu-icon">⚙️</span>
+            الإعدادات
+        </button>
+
+    </nav>
+
+    <div class="sidebar-bottom">
+
+        <div class="plan">
+
+            <div class="plan-title">
+                الخطة الحالية
             </div>
 
-            <div class="logo-text">
-                HTML<span>ToVideo</span>
+            <div class="plan-name">
+                Free Plan
+            </div>
+
+            <div class="plan-bar">
+                <div class="plan-progress"></div>
             </div>
 
         </div>
 
-        <nav class="menu">
+    </div>
 
-            <button
-                class="menu-item active"
-                type="button"
-            >
-                <span class="menu-icon">🎬</span>
-                تحويل إلى فيديو
-            </button>
+</aside>
 
-            <button
-                class="menu-item"
-                type="button"
-            >
-                <span class="menu-icon">📁</span>
-                مشاريعي
-            </button>
+<main class="main">
 
-            <button
-                class="menu-item"
-                type="button"
-            >
-                <span class="menu-icon">🎞️</span>
-                الفيديوهات
-            </button>
+    <div class="topbar">
 
-            <button
-                class="menu-item"
-                type="button"
-            >
-                <span class="menu-icon">⚙️</span>
-                الإعدادات
-            </button>
+        <div>
 
-        </nav>
+            <h1 class="page-title">
+                تحويل صفحة ويب إلى فيديو
+            </h1>
 
-        <div class="sidebar-bottom">
-
-            <div class="plan">
-
-                <div class="plan-title">
-                    الخطة الحالية
-                </div>
-
-                <div class="plan-name">
-                    Free Plan
-                </div>
-
-                <div class="plan-bar">
-
-                    <div class="plan-progress"></div>
-
-                </div>
-
-            </div>
+            <p class="page-subtitle">
+                حوّل HTML / CSS / JavaScript Animation إلى فيديو MP4 عالي الجودة
+            </p>
 
         </div>
 
-    </aside>
-
-
-    <!-- =====================================================
-         MAIN
-    ====================================================== -->
-
-    <main class="main">
-
-        <div class="topbar">
+        <div class="user">
 
             <div>
 
-                <h1 class="page-title">
-                    تحويل صفحة ويب إلى فيديو
-                </h1>
-
-                <p class="page-subtitle">
-                    حوّل HTML / CSS / JavaScript Animation إلى فيديو MP4 عالي الجودة
-                </p>
-
-            </div>
-
-            <div class="user">
-
-                <div>
-
-                    <div
-                        style="
-                            font-size:12px;
-                            font-weight:700;
-                        "
-                    >
-                        حسابي
-                    </div>
-
-                    <div
-                        style="
-                            font-size:10px;
-                            color:var(--muted);
-                        "
-                    >
-                        مستخدم
-                    </div>
-
+                <div
+                    style="
+                        font-size:12px;
+                        font-weight:700;
+                    "
+                >
+                    حسابي
                 </div>
-
-                <div class="avatar">
-                    U
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="workspace">
-
-            <!-- =================================================
-                 LEFT COLUMN
-            ================================================== -->
-
-            <section>
-
-                <!-- UPLOAD CARD -->
-
-                <div class="card">
-
-                    <div class="card-title">
-                        صفحة الويب
-                    </div>
-
-                    <div class="card-description">
-                        ارفع ملف HTML الذي يحتوي على التصميم والأنيميشن
-                    </div>
-
-                    <div
-                        class="drop-zone"
-                        id="dropZone"
-                    >
-
-                        <div class="upload-icon">
-                            ↑
-                        </div>
-
-                        <div class="upload-title">
-                            اسحب ملف HTML إلى هنا
-                        </div>
-
-                        <div class="upload-text">
-                            أو اختر ملفًا من جهازك
-                        </div>
-
-                        <button
-                            type="button"
-                            class="upload-button"
-                            id="chooseButton"
-                        >
-                            اختيار ملف HTML
-                        </button>
-
-                        <input
-                            type="file"
-                            id="fileInput"
-                            accept=".html,.htm"
-                        >
-
-                    </div>
-
-
-                    <div
-                        class="file-preview"
-                        id="filePreview"
-                    >
-
-                        <div class="file-info">
-
-                            <div class="file-icon">
-                                HTML
-                            </div>
-
-                            <div>
-
-                                <div
-                                    class="file-name"
-                                    id="fileName"
-                                ></div>
-
-                                <div
-                                    class="file-size"
-                                    id="fileSize"
-                                ></div>
-
-                            </div>
-
-                        </div>
-
-                        <button
-                            class="remove-file"
-                            id="removeFile"
-                            type="button"
-                        >
-                            ×
-                        </button>
-
-                    </div>
-
-
-                    <div
-                        class="message"
-                        id="uploadMessage"
-                    ></div>
-
-                </div>
-
-
-                <!-- PREVIEW -->
-
-                <div class="card preview-card">
-
-                    <div class="card-title">
-                        المعاينة
-                    </div>
-
-                    <div class="card-description">
-                        معاينة ملف HTML قبل إرساله إلى السيرفر
-                    </div>
-
-                    <div class="preview-container">
-
-                        <div class="phone">
-
-                            <div
-                                class="phone-screen"
-                                id="phoneScreen"
-                            >
-
-                                <div class="preview-placeholder">
-
-                                    <div class="preview-placeholder-icon">
-                                        🎬
-                                    </div>
-
-                                    <div>
-                                        ارفع HTML<br>
-                                        لمعاينة الإعلان
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- PROGRESS -->
 
                 <div
-                    class="card progress-card"
-                    id="progressCard"
+                    style="
+                        font-size:10px;
+                        color:var(--muted);
+                    "
+                >
+                    مستخدم
+                </div>
+
+            </div>
+
+            <div class="avatar">
+                U
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="workspace">
+
+        <section>
+
+            <div class="card">
+
+                <div class="card-title">
+                    صفحة الويب
+                </div>
+
+                <div class="card-description">
+                    ارفع ملف HTML الذي يحتوي على التصميم والأنيميشن
+                </div>
+
+                <div
+                    class="drop-zone"
+                    id="dropZone"
                 >
 
-                    <div class="progress-top">
-
-                        <div
-                            class="progress-label"
-                            id="progressLabel"
-                        >
-                            جارٍ إنشاء الفيديو...
-                        </div>
-
-                        <div
-                            class="progress-percent"
-                            id="progressPercent"
-                        >
-                            0%
-                        </div>
-
+                    <div class="upload-icon">
+                        ↑
                     </div>
 
-
-                    <div class="progress-track">
-
-                        <div
-                            class="progress-fill"
-                            id="progressFill"
-                        ></div>
-
+                    <div class="upload-title">
+                        اسحب ملف HTML إلى هنا
                     </div>
 
+                    <div class="upload-text">
+                        أو اختر ملفًا من جهازك
+                    </div>
 
-                    <div
-                        class="progress-status"
-                        id="progressStatus"
+                    <button
+                        type="button"
+                        class="upload-button"
+                        id="chooseButton"
                     >
-                        تجهيز الطلب...
-                    </div>
+                        اختيار ملف HTML
+                    </button>
 
-
-                    <a
-                        class="download-button"
-                        id="downloadButton"
-                        href="#"
-                        target="_blank"
-                        rel="noopener"
+                    <input
+                        type="file"
+                        id="fileInput"
+                        accept=".html,.htm"
                     >
-                        ⬇ تحميل فيديو MP4
-                    </a>
-
-
-                    <div
-                        class="message"
-                        id="jobMessage"
-                    ></div>
 
                 </div>
 
-            </section>
+                <div
+                    class="file-preview"
+                    id="filePreview"
+                >
 
+                    <div class="file-info">
 
-            <!-- =================================================
-                 RIGHT COLUMN
-            ================================================== -->
-
-            <aside>
-
-                <div class="card settings-card">
-
-                    <div class="card-title">
-                        إعدادات الفيديو
-                    </div>
-
-                    <div class="card-description">
-                        اختر مواصفات الفيديو النهائي
-                    </div>
-
-
-                    <div class="settings">
-
-                        <!-- RESOLUTION -->
-
-                        <div class="setting-group">
-
-                            <label>
-                                الدقة
-                            </label>
-
-                            <div class="resolution-grid">
-
-                                <button
-                                    class="resolution active"
-                                    data-width="1080"
-                                    data-height="1920"
-                                    type="button"
-                                >
-                                    <strong>
-                                        1080 × 1920
-                                    </strong>
-                                    <br>
-                                    Full HD
-                                </button>
-
-                                <button
-                                    class="resolution"
-                                    data-width="2160"
-                                    data-height="3840"
-                                    type="button"
-                                >
-                                    <strong>
-                                        2160 × 3840
-                                    </strong>
-                                    <br>
-                                    4K
-                                </button>
-
-                            </div>
-
+                        <div class="file-icon">
+                            HTML
                         </div>
 
-
-                        <!-- FPS -->
-
-                        <div class="setting-group">
-
-                            <label>
-                                معدل الإطارات
-                            </label>
-
-                            <select
-                                class="select"
-                                id="fps"
-                            >
-
-                                <option
-                                    value="30"
-                                    selected
-                                >
-                                    30 FPS
-                                </option>
-
-                                <option value="60">
-                                    60 FPS
-                                </option>
-
-                            </select>
-
-                        </div>
-
-
-                        <!-- DURATION -->
-
-                        <div class="setting-group">
-
-                            <label>
-                                مدة الفيديو بالثواني
-                            </label>
-
-                            <input
-                                class="input"
-                                id="duration"
-                                type="number"
-                                value="15"
-                                min="1"
-                                max="300"
-                            >
-
-                        </div>
-
-
-                        <!-- FORMAT -->
-
-                        <div class="setting-group">
-
-                            <label>
-                                الصيغة
-                            </label>
-
-                            <select
-                                class="select"
-                                id="format"
-                            >
-
-                                <option value="mp4">
-                                    MP4 — H.264
-                                </option>
-
-                            </select>
-
-                        </div>
-
-
-                        <!-- ADVANCED -->
-
-                        <div
-                            class="advanced"
-                            id="advanced"
-                        >
+                        <div>
 
                             <div
-                                class="advanced-title"
-                                id="advancedToggle"
-                            >
+                                class="file-name"
+                                id="fileName"
+                            ></div>
 
-                                <span>
-                                    إعدادات متقدمة
-                                </span>
+                            <div
+                                class="file-size"
+                                id="fileSize"
+                            ></div>
 
-                                <span>
-                                    ▼
-                                </span>
+                        </div>
 
-                            </div>
+                    </div>
 
+                    <button
+                        class="remove-file"
+                        id="removeFile"
+                        type="button"
+                    >
+                        ×
+                    </button>
 
-                            <div class="advanced-content">
+                </div>
 
-                                <div class="setting-group">
+                <div
+                    class="message"
+                    id="uploadMessage"
+                ></div>
 
-                                    <label>
-                                        جودة الفيديو
-                                    </label>
+            </div>
 
-                                    <select
-                                        class="select"
-                                        id="quality"
-                                    >
+            <div class="card preview-card">
 
-                                        <option
-                                            value="medium"
-                                            selected
-                                        >
-                                            متوسطة
-                                        </option>
+                <div class="card-title">
+                    المعاينة
+                </div>
 
-                                        <option value="high">
-                                            عالية
-                                        </option>
+                <div class="card-description">
+                    معاينة ملف HTML قبل إرساله إلى السيرفر
+                </div>
 
-                                        <option value="very-high">
-                                            عالية جدًا
-                                        </option>
+                <div class="preview-container">
 
-                                    </select>
+                    <div class="phone">
 
+                        <div
+                            class="phone-screen"
+                            id="phoneScreen"
+                        >
+
+                            <div class="preview-placeholder">
+
+                                <div class="preview-placeholder-icon">
+                                    🎬
+                                </div>
+
+                                <div>
+                                    ارفع HTML<br>
+                                    لمعاينة الإعلان
                                 </div>
 
                             </div>
 
                         </div>
 
-
-                        <!-- EXPORT -->
-
-                        <button
-                            class="export-button"
-                            id="exportButton"
-                            disabled
-                            type="button"
-                        >
-                            🎬 إنشاء فيديو MP4
-                        </button>
-
                     </div>
 
                 </div>
 
-            </aside>
+            </div>
 
-        </div>
+            <div
+                class="card progress-card"
+                id="progressCard"
+            >
 
-    </main>
+                <div class="progress-top">
+
+                    <div
+                        class="progress-label"
+                        id="progressLabel"
+                    >
+                        جارٍ إنشاء الفيديو...
+                    </div>
+
+                    <div
+                        class="progress-percent"
+                        id="progressPercent"
+                    >
+                        0%
+                    </div>
+
+                </div>
+
+                <div class="progress-track">
+
+                    <div
+                        class="progress-fill"
+                        id="progressFill"
+                    ></div>
+
+                </div>
+
+                <div
+                    class="progress-status"
+                    id="progressStatus"
+                >
+                    تجهيز الطلب...
+                </div>
+
+                <a
+                    class="download-button"
+                    id="downloadButton"
+                    href="#"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    ⬇ تحميل فيديو MP4
+                </a>
+
+                <div
+                    class="message"
+                    id="jobMessage"
+                ></div>
+
+            </div>
+
+        </section>
+
+        <aside>
+
+            <div class="card settings-card">
+
+                <div class="card-title">
+                    إعدادات الفيديو
+                </div>
+
+                <div class="card-description">
+                    اختر مواصفات الفيديو النهائي
+                </div>
+
+                <div class="settings">
+
+                    <div class="setting-group">
+
+                        <label>
+                            الدقة
+                        </label>
+
+                        <div class="resolution-grid">
+
+                            <button
+                                class="resolution active"
+                                data-width="1080"
+                                data-height="1920"
+                                type="button"
+                            >
+                                <strong>
+                                    1080 × 1920
+                                </strong>
+                                <br>
+                                Full HD
+                            </button>
+
+                            <button
+                                class="resolution"
+                                data-width="2160"
+                                data-height="3840"
+                                type="button"
+                            >
+                                <strong>
+                                    2160 × 3840
+                                </strong>
+                                <br>
+                                4K
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="setting-group">
+
+                        <label>
+                            معدل الإطارات
+                        </label>
+
+                        <select
+                            class="select"
+                            id="fps"
+                        >
+
+                            <option
+                                value="30"
+                                selected
+                            >
+                                30 FPS
+                            </option>
+
+                            <option value="60">
+                                60 FPS
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="setting-group">
+
+                        <label>
+                            مدة الفيديو بالثواني
+                        </label>
+
+                        <input
+                            class="input"
+                            id="duration"
+                            type="number"
+                            value="15"
+                            min="1"
+                            max="120"
+                        >
+
+                    </div>
+
+                    <div class="setting-group">
+
+                        <label>
+                            الصيغة
+                        </label>
+
+                        <select
+                            class="select"
+                            id="format"
+                        >
+
+                            <option value="mp4">
+                                MP4 — H.264
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div
+                        class="advanced"
+                        id="advanced"
+                    >
+
+                        <div
+                            class="advanced-title"
+                            id="advancedToggle"
+                        >
+
+                            <span>
+                                إعدادات متقدمة
+                            </span>
+
+                            <span>
+                                ▼
+                            </span>
+
+                        </div>
+
+                        <div class="advanced-content">
+
+                            <div class="setting-group">
+
+                                <label>
+                                    جودة الفيديو
+                                </label>
+
+                                <select
+                                    class="select"
+                                    id="quality"
+                                >
+
+                                    <option value="medium">
+                                        متوسطة
+                                    </option>
+
+                                    <option
+                                        value="high"
+                                        selected
+                                    >
+                                        عالية
+                                    </option>
+
+                                    <option value="very-high">
+                                        عالية جدًا
+                                    </option>
+
+                                </select>
+
+                                <div class="quality-note">
+                                    الجودة الأعلى تعطي صورة أفضل، لكنها قد تحتاج وقتًا ومساحة أكبر للمعالجة.
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button
+                        class="export-button"
+                        id="exportButton"
+                        disabled
+                        type="button"
+                    >
+                        🎬 إنشاء فيديو MP4
+                    </button>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</main>
+```
 
 </div>
-
 
 <script>
 
 /* =========================================================
-   API CONFIGURATION
+   API
 ========================================================= */
-
-/*
- * مهم جدًا:
- *
- * الموقع يعمل على:
- *
- * https://htmltovideo.laaroubimohammed7.workers.dev
- *
- * لكن PHP + Node + Playwright + FFmpeg
- * تعمل على:
- *
- * https://htmltovideo.tech
- *
- * لذلك لا نستخدم:
- *
- * /api/upload.php
- *
- * لأن ذلك سيذهب إلى Cloudflare Worker.
- *
- * نستخدم النطاق الحقيقي للسيرفر.
- */
 
 const API_BASE =
     "https://htmltovideo.tech";
@@ -1655,89 +1593,55 @@ const API = {
 ========================================================= */
 
 const fileInput =
-    document.getElementById(
-        "fileInput"
-    );
+    document.getElementById("fileInput");
 
 const dropZone =
-    document.getElementById(
-        "dropZone"
-    );
+    document.getElementById("dropZone");
 
 const chooseButton =
-    document.getElementById(
-        "chooseButton"
-    );
+    document.getElementById("chooseButton");
 
 const filePreview =
-    document.getElementById(
-        "filePreview"
-    );
+    document.getElementById("filePreview");
 
 const fileName =
-    document.getElementById(
-        "fileName"
-    );
+    document.getElementById("fileName");
 
 const fileSize =
-    document.getElementById(
-        "fileSize"
-    );
+    document.getElementById("fileSize");
 
 const removeFile =
-    document.getElementById(
-        "removeFile"
-    );
+    document.getElementById("removeFile");
 
 const exportButton =
-    document.getElementById(
-        "exportButton"
-    );
+    document.getElementById("exportButton");
 
 const phoneScreen =
-    document.getElementById(
-        "phoneScreen"
-    );
+    document.getElementById("phoneScreen");
 
 const progressCard =
-    document.getElementById(
-        "progressCard"
-    );
+    document.getElementById("progressCard");
 
 const progressFill =
-    document.getElementById(
-        "progressFill"
-    );
+    document.getElementById("progressFill");
 
 const progressPercent =
-    document.getElementById(
-        "progressPercent"
-    );
+    document.getElementById("progressPercent");
 
 const progressStatus =
-    document.getElementById(
-        "progressStatus"
-    );
+    document.getElementById("progressStatus");
 
 const progressLabel =
-    document.getElementById(
-        "progressLabel"
-    );
+    document.getElementById("progressLabel");
 
 const downloadButton =
-    document.getElementById(
-        "downloadButton"
-    );
+    document.getElementById("downloadButton");
 
 const uploadMessage =
-    document.getElementById(
-        "uploadMessage"
-    );
+    document.getElementById("uploadMessage");
 
 const jobMessage =
-    document.getElementById(
-        "jobMessage"
-    );
+    document.getElementById("jobMessage");
 
 
 /* =========================================================
@@ -1747,11 +1651,8 @@ const jobMessage =
 let selectedFile = null;
 
 let selectedResolution = {
-
     width: 1080,
-
     height: 1920
-
 };
 
 let currentUploadId = null;
@@ -1783,34 +1684,26 @@ function sleep(ms) {
 function formatBytes(bytes) {
 
     if (!bytes) {
-
         return "0 Bytes";
-
     }
 
     const units = [
-
         "Bytes",
         "KB",
         "MB",
         "GB"
-
     ];
 
     const index =
         Math.min(
-
             Math.floor(
                 Math.log(bytes) /
                 Math.log(1024)
             ),
-
             units.length - 1
-
         );
 
     return (
-
         (
             bytes /
             Math.pow(
@@ -1818,11 +1711,8 @@ function formatBytes(bytes) {
                 index
             )
         ).toFixed(1)
-
         + " "
-
         + units[index]
-
     );
 
 }
@@ -1861,12 +1751,8 @@ function setProgress(
     let value =
         Number(percent);
 
-    if (
-        !Number.isFinite(value)
-    ) {
-
+    if (!Number.isFinite(value)) {
         value = 0;
-
     }
 
     value =
@@ -1885,27 +1771,12 @@ function setProgress(
         Math.round(value) + "%";
 
     if (status) {
-
         progressStatus.textContent =
             status;
-
     }
 
 }
 
-
-/*
- * يحول الرابط الذي يرجعه PHP
- * إلى رابط كامل على htmltovideo.tech.
- *
- * مثال:
- *
- * /download.php?job_id=123
- *
- * يصبح:
- *
- * https://htmltovideo.tech/download.php?job_id=123
- */
 
 function makeDownloadUrl(
     downloadUrl,
@@ -1914,9 +1785,7 @@ function makeDownloadUrl(
 
     if (
         downloadUrl &&
-        /^https?:\/\//i.test(
-            downloadUrl
-        )
+        /^https?:\/\//i.test(downloadUrl)
     ) {
 
         return downloadUrl;
@@ -1938,9 +1807,7 @@ function makeDownloadUrl(
     return (
         API.download +
         "?job_id=" +
-        encodeURIComponent(
-            jobId
-        )
+        encodeURIComponent(jobId)
     );
 
 }
@@ -1970,9 +1837,7 @@ dropZone.addEventListener(
             event.target ===
             chooseButton
         ) {
-
             return;
-
         }
 
         fileInput.click();
@@ -1989,9 +1854,7 @@ fileInput.addEventListener(
             event.target.files[0];
 
         if (file) {
-
             setFile(file);
-
         }
 
     }
@@ -2037,13 +1900,9 @@ dropZone.addEventListener(
         const file =
             event.dataTransfer.files[0];
 
-        if (!file) {
-
-            return;
-
+        if (file) {
+            setFile(file);
         }
-
-        setFile(file);
 
     }
 );
@@ -2076,22 +1935,17 @@ function setFile(file) {
 
     }
 
-    selectedFile =
-        file;
+    selectedFile = file;
 
-    currentUploadId =
-        null;
+    currentUploadId = null;
 
-    currentJobId =
-        null;
+    currentJobId = null;
 
     fileName.textContent =
         file.name;
 
     fileSize.textContent =
-        formatBytes(
-            file.size
-        );
+        formatBytes(file.size);
 
     filePreview.style.display =
         "flex";
@@ -2122,22 +1976,16 @@ removeFile.addEventListener(
     () => {
 
         if (isProcessing) {
-
             return;
-
         }
 
-        selectedFile =
-            null;
+        selectedFile = null;
 
-        currentUploadId =
-            null;
+        currentUploadId = null;
 
-        currentJobId =
-            null;
+        currentJobId = null;
 
-        fileInput.value =
-            "";
+        fileInput.value = "";
 
         filePreview.style.display =
             "none";
@@ -2175,17 +2023,12 @@ function updatePreview(file) {
     }
 
     previewObjectUrl =
-        URL.createObjectURL(
-            file
-        );
+        URL.createObjectURL(file);
 
-    phoneScreen.innerHTML =
-        "";
+    phoneScreen.innerHTML = "";
 
     const iframe =
-        document.createElement(
-            "iframe"
-        );
+        document.createElement("iframe");
 
     iframe.src =
         previewObjectUrl;
@@ -2220,8 +2063,7 @@ function resetPreview() {
             previewObjectUrl
         );
 
-        previewObjectUrl =
-            null;
+        previewObjectUrl = null;
 
     }
 
@@ -2262,13 +2104,12 @@ resolutionButtons.forEach(
             "click",
             () => {
 
-                resolutionButtons
-                    .forEach(
-                        btn =>
-                            btn.classList.remove(
-                                "active"
-                            )
-                    );
+                resolutionButtons.forEach(
+                    btn =>
+                        btn.classList.remove(
+                            "active"
+                        )
+                );
 
                 button.classList.add(
                     "active"
@@ -2300,20 +2141,14 @@ resolutionButtons.forEach(
 ========================================================= */
 
 document
-    .getElementById(
-        "advancedToggle"
-    )
+    .getElementById("advancedToggle")
     .addEventListener(
         "click",
         () => {
 
             document
-                .getElementById(
-                    "advanced"
-                )
-                .classList.toggle(
-                    "open"
-                );
+                .getElementById("advanced")
+                .classList.toggle("open");
 
         }
     );
@@ -2367,12 +2202,10 @@ function resetProgress() {
 
 
 /* =========================================================
-   HTTP JSON HELPER
+   HTTP JSON
 ========================================================= */
 
-async function readJsonResponse(
-    response
-) {
+async function readJsonResponse(response) {
 
     let data = null;
 
@@ -2392,17 +2225,9 @@ async function readJsonResponse(
     if (!response.ok) {
 
         throw new Error(
-
-            data &&
-            data.error
-
+            data && data.error
                 ? data.error
-
-                : (
-                    "خطأ HTTP " +
-                    response.status
-                )
-
+                : "خطأ HTTP " + response.status
         );
 
     }
@@ -2413,7 +2238,7 @@ async function readJsonResponse(
 
 
 /* =========================================================
-   UPLOAD FILE
+   UPLOAD
 ========================================================= */
 
 async function uploadFile() {
@@ -2431,7 +2256,6 @@ async function uploadFile() {
         "رفع ملف HTML إلى السيرفر..."
     );
 
-
     const formData =
         new FormData();
 
@@ -2441,7 +2265,6 @@ async function uploadFile() {
         selectedFile.name
     );
 
-
     let response;
 
     try {
@@ -2450,13 +2273,9 @@ async function uploadFile() {
             await fetch(
                 API.upload,
                 {
-
                     method: "POST",
-
                     body: formData,
-
                     cache: "no-store"
-
                 }
             );
 
@@ -2468,12 +2287,10 @@ async function uploadFile() {
 
     }
 
-
     const data =
         await readJsonResponse(
             response
         );
-
 
     if (
         !data.success ||
@@ -2487,16 +2304,13 @@ async function uploadFile() {
 
     }
 
-
     currentUploadId =
         data.upload_id;
-
 
     setProgress(
         15,
         "تم رفع الملف بنجاح."
     );
-
 
     return data;
 
@@ -2517,14 +2331,12 @@ async function createJob() {
 
     }
 
-
     const fps =
         Number(
             document.getElementById(
                 "fps"
             ).value
         );
-
 
     const duration =
         Number(
@@ -2533,12 +2345,10 @@ async function createJob() {
             ).value
         );
 
-
     const quality =
         document.getElementById(
             "quality"
         ).value;
-
 
     if (
         !Number.isFinite(fps) ||
@@ -2551,19 +2361,17 @@ async function createJob() {
 
     }
 
-
     if (
         !Number.isFinite(duration) ||
         duration < 1 ||
-        duration > 300
+        duration > 120
     ) {
 
         throw new Error(
-            "مدة الفيديو يجب أن تكون بين 1 و300 ثانية."
+            "مدة الفيديو يجب أن تكون بين 1 و120 ثانية."
         );
 
     }
-
 
     const payload = {
 
@@ -2577,25 +2385,20 @@ async function createJob() {
             selectedResolution.height,
 
         fps:
-
             fps,
 
         duration:
-
             duration,
 
         quality:
-
             quality
 
     };
-
 
     setProgress(
         18,
         "إنشاء مهمة الفيديو..."
     );
-
 
     let response;
 
@@ -2623,7 +2426,8 @@ async function createJob() {
                             payload
                         ),
 
-                    cache: "no-store"
+                    cache:
+                        "no-store"
 
                 }
             );
@@ -2636,12 +2440,10 @@ async function createJob() {
 
     }
 
-
     const data =
         await readJsonResponse(
             response
         );
-
 
     if (
         !data.success ||
@@ -2655,16 +2457,13 @@ async function createJob() {
 
     }
 
-
     currentJobId =
         data.job_id;
-
 
     setProgress(
         Number(data.progress) || 20,
         "تم إنشاء المهمة. في انتظار عامل الفيديو..."
     );
-
 
     return data;
 
@@ -2672,7 +2471,7 @@ async function createJob() {
 
 
 /* =========================================================
-   GET JOB STATUS
+   JOB STATUS
 ========================================================= */
 
 async function getJobStatus() {
@@ -2685,14 +2484,12 @@ async function getJobStatus() {
 
     }
 
-
     const url =
         API.status +
         "?job_id=" +
         encodeURIComponent(
             currentJobId
         );
-
 
     let response;
 
@@ -2705,7 +2502,8 @@ async function getJobStatus() {
 
                     method: "GET",
 
-                    cache: "no-store",
+                    cache:
+                        "no-store",
 
                     headers: {
 
@@ -2725,12 +2523,10 @@ async function getJobStatus() {
 
     }
 
-
     const data =
         await readJsonResponse(
             response
         );
-
 
     if (!data.success) {
 
@@ -2741,7 +2537,6 @@ async function getJobStatus() {
 
     }
 
-
     return data;
 
 }
@@ -2751,46 +2546,33 @@ async function getJobStatus() {
    STATUS TEXT
 ========================================================= */
 
-function getStatusText(
-    status
-) {
+function getStatusText(status) {
 
     switch (status) {
 
         case "queued":
-
             return "المهمة في قائمة الانتظار...";
 
         case "processing":
-
             return "السيرفر يقوم بمعالجة الفيديو...";
 
         case "rendering":
-
             return "السيرفر يقوم بتسجيل الأنيميشن...";
 
         case "encoding":
-
             return "تحويل الإطارات إلى MP4...";
 
         case "completed":
-
             return "الفيديو جاهز للتحميل.";
 
         case "failed":
-
             return "فشل إنشاء الفيديو.";
 
         case "error":
-
             return "حدث خطأ أثناء إنشاء الفيديو.";
 
         default:
-
-            return (
-                "الحالة الحالية: " +
-                status
-            );
+            return "الحالة الحالية: " + status;
 
     }
 
@@ -2803,16 +2585,8 @@ function getStatusText(
 
 async function waitForJob() {
 
-    /*
-     * كل محاولتين ثانية.
-     *
-     * 900 محاولة =
-     * 30 دقيقة تقريبًا.
-     */
-
     const maximumAttempts =
         900;
-
 
     for (
         let attempt = 0;
@@ -2823,83 +2597,54 @@ async function waitForJob() {
         const data =
             await getJobStatus();
 
-
         const status =
             String(
                 data.status || ""
             ).toLowerCase();
-
 
         let progress =
             Number(
                 data.progress
             );
 
-
         if (
-            !Number.isFinite(
-                progress
-            )
+            !Number.isFinite(progress)
         ) {
 
             progress = 0;
 
         }
 
-
         if (
-            status ===
-            "queued"
+            status === "queued"
         ) {
 
             setProgress(
-
                 Math.max(
                     20,
                     progress
                 ),
-
-                getStatusText(
-                    status
-                )
-
+                getStatusText(status)
             );
 
-        }
+        } else if (
 
-
-        else if (
-
-            status ===
-                "processing" ||
-
-            status ===
-                "rendering" ||
-
-            status ===
-                "encoding"
+            status === "processing" ||
+            status === "rendering" ||
+            status === "encoding"
 
         ) {
 
             setProgress(
-
                 Math.max(
                     20,
                     progress
                 ),
-
-                getStatusText(
-                    status
-                )
-
+                getStatusText(status)
             );
 
-        }
-
-
-        else if (
-            status ===
-            "completed"
+        } else if (
+            status === "completed"
         ) {
 
             setProgress(
@@ -2909,54 +2654,33 @@ async function waitForJob() {
 
             return data;
 
-        }
+        } else if (
 
-
-        else if (
-
-            status ===
-                "failed" ||
-
-            status ===
-                "error"
+            status === "failed" ||
+            status === "error"
 
         ) {
 
             throw new Error(
-
                 data.error ||
-
                 "فشل إنشاء الفيديو على السيرفر."
-
             );
 
-        }
-
-
-        else {
+        } else {
 
             setProgress(
-
                 Math.max(
                     20,
                     progress
                 ),
-
-                getStatusText(
-                    status
-                )
-
+                getStatusText(status)
             );
 
         }
 
-
-        await sleep(
-            2000
-        );
+        await sleep(2000);
 
     }
-
 
     throw new Error(
         "انتهت مهلة انتظار إنشاء الفيديو."
@@ -2977,100 +2701,52 @@ exportButton.addEventListener(
             !selectedFile ||
             isProcessing
         ) {
-
             return;
-
         }
 
+        isProcessing = true;
 
-        isProcessing =
-            true;
+        exportButton.disabled = true;
 
-
-        exportButton.disabled =
-            true;
-
-        removeFile.disabled =
-            true;
-
+        removeFile.disabled = true;
 
         progressCard.style.display =
             "block";
-
 
         progressCard.classList.remove(
             "success",
             "error"
         );
 
-
         progressFill.classList.remove(
             "success"
         );
 
-
         downloadButton.style.display =
             "none";
-
 
         hideMessage(
             jobMessage
         );
 
+        currentUploadId = null;
 
-        currentUploadId =
-            null;
-
-        currentJobId =
-            null;
-
+        currentJobId = null;
 
         try {
 
-            /*
-             * STEP 1
-             * Upload
-             */
-
             await uploadFile();
 
-
-            /*
-             * STEP 2
-             * Create job
-             */
-
             await createJob();
-
-
-            /*
-             * STEP 3
-             * Wait until completed
-             */
 
             const result =
                 await waitForJob();
 
-
-            /*
-             * STEP 4
-             * Build download URL
-             */
-
             const downloadUrl =
                 makeDownloadUrl(
-
                     result.download_url,
-
                     currentJobId
-
                 );
-
-
-            /*
-             * STEP 5
-             * Show success
-             */
 
             progressCard.classList.add(
                 "success"
@@ -3080,98 +2756,68 @@ exportButton.addEventListener(
                 "success"
             );
 
-
             progressLabel.textContent =
                 "اكتمل إنشاء الفيديو";
-
 
             setProgress(
                 100,
                 "الفيديو جاهز للتحميل."
             );
 
-
             downloadButton.href =
                 downloadUrl;
-
 
             downloadButton.download =
                 "animation-" +
                 currentJobId +
                 ".mp4";
 
-
             downloadButton.style.display =
                 "block";
 
-
             showMessage(
-
                 jobMessage,
-
                 "تم إنشاء فيديو MP4 بنجاح.",
-
                 "success"
-
             );
-
 
             console.log(
                 "Video ready:",
                 downloadUrl
             );
 
-        }
-
-
-        catch (error) {
+        } catch (error) {
 
             console.error(
                 "HTMLToVideo error:",
                 error
             );
 
-
             progressCard.classList.add(
                 "error"
             );
 
-
             progressLabel.textContent =
                 "حدث خطأ";
-
 
             progressStatus.textContent =
                 "تعذر إنشاء الفيديو.";
 
-
             showMessage(
-
                 jobMessage,
-
                 error &&
                 error.message
-
                     ? error.message
-
                     : "حدث خطأ غير معروف.",
-
                 "error"
-
             );
 
-        }
+        } finally {
 
-
-        finally {
-
-            isProcessing =
-                false;
-
+            isProcessing = false;
 
             exportButton.disabled =
                 !selectedFile;
-
 
             removeFile.disabled =
                 false;
